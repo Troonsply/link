@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Link</title>
+    <style>
+    html,
+    body {
+    width: 100%;
+    height: 100%;
+    }
+    </style>
+    <script  type="text/javascript">
+        if (window.localStorage) {
+        var value = localStorage.getItem('count'),
+            newvalue = isFinite(value) ? ++value : 0;
+
+        localStorage.setItem('count', newvalue);
+        console.log(newvalue);
+        }
+        function go(addr) {
+            window.open(addr,"test", "menubar=yes,width=1024,height=768");
+            window.location.href('');
+        }
+        var cookies = document.cookie;
+        console.log(cookies);
+  </script>
+</head>
+<body>
+<a href = "https://yandex.ru/" onclick="go('http://google.com'); return false;" class="link">Кликните здесь</>
+</body>
+</html>
