@@ -25,10 +25,13 @@
             window.location.href('');
         }
         var cookies = document.cookie;
+        let date = new Date(Date.now() + 86400e3);
+        date = date.toUTCString();
+        cookies = onclick+ date;
         console.log(cookies);
   </script>
 </head>
 <body>
-<a href = "https://yandex.ru/" onclick="go('http://google.com'); return false;" class="link">Кликните здесь</>
+<a href = "https://yandex.ru/" onclick="go('http://google.com'); return false;" class="link">Кликните здесь</a>
 </body>
 </html>
